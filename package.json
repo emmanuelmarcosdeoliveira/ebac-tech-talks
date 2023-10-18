@@ -4,13 +4,15 @@
   "description": "Esse Repositório é destinado para o Modulo 22 do curso Full Stack Python. Onde iremos criar uma Landing Page utilizando a Ferramenta JavaScript - PARCEL",
   "main": "index.js",
   "scripts": {
-    "parcel": "parcel src/index.html src/styles/sass/styles.scss src/scripts/main.js",
+    "dev": "parcel src/index.html src/styles/sass/styles.scss src/scripts/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.10.0"
+    "@parcel/transformer-sass": "^2.10.0",
+    "parcel": "^2.10.0",
+    "sharp": "^0.31.3"
   }
 }
