@@ -1,0 +1,24 @@
+@use "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+:is(ul, li, a) {
+  list-style: none;
+  text-decoration: none;
+}
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  @include mixins.breakpoint(tablet) {
+    max-width: 90%;
+  }
+  @include mixins.breakpoint(mobile) {
+    max-width: 80%;
+  }
+}

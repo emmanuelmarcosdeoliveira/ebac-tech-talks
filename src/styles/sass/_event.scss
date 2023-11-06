@@ -1,0 +1,50 @@
+@use "mixins";
+@use "variaveis";
+
+.event {
+  padding: 80px 0;
+  &--frontend {
+    background-image: linear-gradient(variaveis.$blue1, variaveis.$blue1);
+  }
+  &--ui-ux {
+    background-image: linear-gradient(variaveis.$blue1, variaveis.$pink);
+  }
+  &--data-science {
+    background-image: linear-gradient(variaveis.$pink, variaveis.$yellow);
+  }
+  &--backend {
+    background-image: linear-gradient(variaveis.$yellow, variaveis.$pink);
+  }
+
+  &--image-left {
+    .container {
+      flex-direction: row-reverse;
+    }
+  }
+  .container {
+    display: flex;
+    gap: 40px;
+    @include mixins.breakpoint(mobile) {
+      flex-direction: column;
+    }
+  }
+  &__image {
+    max-width: 360px;
+    display: block;
+  }
+
+  &__details {
+    @include mixins.breakpoint(mobile) {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+    &__title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    &__description {
+      @include mixins.fonteTexto;
+    }
+  }
+}

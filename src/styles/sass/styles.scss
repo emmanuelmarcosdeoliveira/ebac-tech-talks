@@ -1,3 +1,21 @@
-body {
-  background-color: rgb(231, 198, 174);
-}
+@use "reset";
+@use "mixins";
+@use "hero";
+@use "components/infos_bar";
+@use "./components/buttons";
+@use "./event";
+
+// body {
+//   @include mixins.breakpoint(ultra) {
+//     background-color: pink;
+//   }
+//   @include mixins.breakpoint(desktop) {
+//     background-color: yellowgreen;
+//   }
+//   @include mixins.breakpoint(tablet) {
+//     background-color: red;
+//   }
+//   @include mixins.breakpoint(mobile) {
+//     background-color: chocolate;
+//   }
+// }

@@ -1,0 +1,49 @@
+@use "mixins";
+
+.hero {
+  padding-top: 64px;
+  padding-bottom: 100px;
+  background-image: url(../../images/fundo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .container {
+    position: relative;
+    @include mixins.breakpoint(mobile) {
+      padding: 40px 0;
+      &__logo {
+        height: 24px;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+  }
+  &__text {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    @include mixins.fonteTitulo(40px);
+    text-align: center;
+    @include mixins.breakpoint(mobile) {
+      margin: 24px 0;
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    min-height: 80px;
+    @include mixins.breakpoint(mobile) {
+      min-height: 40px;
+    }
+  }
+}

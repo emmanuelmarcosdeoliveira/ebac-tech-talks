@@ -1,0 +1,23 @@
+@use "../variaveis";
+@use "../mixins";
+
+.button {
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: variaveis.$cor1;
+  text-align: center;
+  white-space: nowrap;
+  @include mixins.breakpoint(tablet) {
+    display: flex;
+    align-items: center;
+    @include mixins.breakpoint(mobile) {
+      display: block;
+      align-items: center;
+    }
+  }
+
+  &--primary {
+    background-color: variaveis.$cor3;
+  }
+}

@@ -1,1 +1,1 @@
-console.log("Ola Mundo PARCEL")
+AOS.init();
