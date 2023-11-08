@@ -1,0 +1,18 @@
+{
+  "name": "ebac-tech-talks",
+  "version": "1.0.0",
+  "description": "Esse Repositório é destinado para o Modulo 22 do curso Full Stack Python. Onde iremos criar uma Landing Page utilizando a Ferramenta JavaScript - PARCEL",
+  "scripts": {
+    "dev": "parcel src/index.html --no-cache src/styles/sass/styles.scss src/scripts/main.js",
+    "build": "parcel build src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.2",
+    "parcel": "^2.10.2",
+    "sharp": "^0.31.3"
+  }
+}

@@ -1,0 +1,35 @@
+@use "../variaveis";
+@use "../mixins";
+
+.infos-bar {
+  padding: 16px 24px;
+  background-color: variaveis.$cor1;
+  display: flex;
+  justify-content: space-between;
+  @include mixins.breakpoint(mobile) {
+    flex-direction: column;
+  }
+  &__infos {
+    display: flex;
+    gap: 40px;
+    @include mixins.breakpoint(tablet) {
+      gap: 16px;
+    }
+    @include mixins.breakpoint(mobile) {
+      flex-direction: column;
+    }
+    &__i {
+      font-size: 14px;
+      @include mixins.breakpoint(mobile) {
+        margin-bottom: 24px;
+      }
+
+      color: variaveis.$cor2;
+      strong {
+        color: variaveis.$cor2;
+        font-size: 18px;
+        display: block;
+      }
+    }
+  }
+}
